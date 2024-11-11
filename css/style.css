@@ -99,6 +99,9 @@ main h2 {
     padding: 10px;
     border-radius: 10px;
 }
+main a {
+    color: #000;
+}
 
 main p, main article, main ul li {
     margin-bottom: 1rem;
