@@ -1,0 +1,357 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and overall page styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to right, #b3c4fb, #e2e2e2);
+    color: #333;
+    padding: 5px;
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(135deg, #00274c, #00467f); /* Michigan Blue gradient */
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem;
+    position: relative;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px 15px 0 0;
+}
+
+/* Header image styles */
+.header-image img {
+    width: 100%;
+    max-height: 20vh;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+/* Skip link */
+.skip {
+    position: absolute;
+    top: -40px;
+    left: -9999px;
+    background-color: #00274c;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip:focus {
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    border: 2px solid #fff;
+}
+
+/* Main content styles */
+main {
+    padding: 2rem;
+    background-color: #f7f9fc;
+    margin: 2rem auto;
+    max-width: 1200px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    border: 3px solid #ffcb05; /* Michigan Maize border */
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+main .staggered-grid > *:nth-child(odd) {
+    grid-column: span 1;
+}
+
+main .staggered-grid > *:nth-child(even) {
+    grid-column: span 2;
+}
+
+main h1, main h2 {
+    grid-column: span 1; /* Full width for headings */
+}
+
+main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #00274c;
+    border-bottom: 3px solid #ffcb05;
+    display: inline-block;
+    padding-bottom: 5px;
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+main h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #00274c;
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+main p, main article, main ul li {
+    margin-bottom: 1rem;
+    color: #333;
+    line-height: 1.8;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main article {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #00274c; /* Accent border */
+}
+
+/* List style */
+ul {
+    list-style-type: none;
+    color: #333;
+    padding-left: 20px;
+}
+
+/* Footer styles */
+footer {
+    background: linear-gradient(135deg, #00274c, #00467f);
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem;
+    margin-top: 2rem;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+/* Button Styles */
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #00274c; /* Michigan Blue */
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.appointment-btn {
+    background-color: #ffcb05; /* Michigan Maize */
+    color: #00274c; /* Dark text for contrast */
+}
+
+.appointment-btn:hover {
+    background-color: #e7e1c6;
+}
+
+.support-btn {
+    background-color: #00467f; /* Darker blue */
+}
+
+.support-btn:hover {
+    background-color: #a9c5e1;
+}
+
+/* Link Styles */
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+a:hover {
+    transform: scale(1.05);
+}
+
+a:focus {
+    outline: none;
+    border-color: yellow;
+}
+
+/* Navigation Bar styles */
+nav {
+    padding: 0.5rem 0; /* Reduced padding above and below the navigation bar */
+}
+
+/* Remove the default styling of the list */
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Create 4 equal-width columns for each nav item */
+    gap: 10px; /* Space between items */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Ensures the links are centered */
+}
+
+/* Style the individual navigation items */
+nav li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the links */
+nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 1.5rem .25rem; /* Adjust padding to ensure same height */
+    font-weight: bold;
+    font-size: 0.8rem; /* Reduce text size */
+    border: 2px solid #fff; /* White border around the link */
+    border-radius: 10px;
+    height: 2rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+nav a:hover {
+    background: #ffcb05;
+    color: #00274c;
+}
+
+/* Style for the active link */
+nav a.current {
+    background-color: #ffcb05;
+    color: #00274c;
+    border: 2px solid #ffcb05;
+}
+
+@media (min-width: 768px) {
+/* Main content styles */
+main {
+    padding: 2rem;
+    background-color: #f7f9fc;
+    margin: 2rem auto;
+    max-width: 1200px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    border: 3px solid #ffcb05; /* Michigan Maize border */
+    position: relative;
+    gap: 20px;
+}
+
+/* Adjust the staggered grid layout */
+.staggered-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    background-color: #e7e1c6; /* Light blue background */
+    border-radius: 100px; /* Rounded corners */
+}
+
+/* Ensure that the h2 and p span two columns */
+.staggered-grid h2, 
+.staggered-grid p {
+    grid-column: span 2;
+}
+
+/* Specify the first grid item to be in the second column, second item in row 2 column 1 */
+.staggered-grid > .grid-item:nth-child(3n+1) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.staggered-grid > .grid-item:nth-child(3n+2) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.staggered-grid > .grid-item:nth-child(3n+3) {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+
+/* Section style */
+.next-grid {
+    padding: 40px;
+    background-color: #fff; /* White background for the section */
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow around the section */
+}
+
+/* Grid container for articles */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px; /* Increased space between the grid items */
+}
+
+/* Grid item styles */
+.grid-item {
+    position: relative; /* Ensure proper positioning for hover effect */
+    background: linear-gradient(135deg, #00274c, #00467f); /* Gradient background */
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, z-index 0.3s ease-in-out; /* Smooth transition */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fun font */
+}
+
+/* Add enlarged class */
+.grid-item.enlarged {
+    transform: translate(-20%, -20%) scale(2); /* Enlarge the item */
+    z-index: 10; /* Make sure it appears on top of others */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Title styles */
+.grid-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #fff; /* White text for the title */
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* Paragraph styles */
+.grid-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #fff; /* White text for readability */
+}
+}

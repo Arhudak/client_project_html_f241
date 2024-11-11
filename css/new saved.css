@@ -1,0 +1,228 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and overall page styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+/* Header image styles. make it fit to the screen width */
+.header-image img {
+    width: 100%;
+    max-height: 20vh;
+    object-fit: cover;
+}
+
+/* Skip link */
+.skip {
+    position: absolute;
+    top: -40px;
+    left: -9999px; /* Keep offscreen initially */
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip:focus {
+    top: 10px;
+    left: 10px;
+    z-index: 1000; /* Ensure it's on top of other elements */
+    border: 2px solid #fff; /* Optional: Add border for better focus visibility */
+}
+
+/* Main content styles */
+main {
+    padding: 2rem;
+    background-color: #fff;
+    margin-top: 2rem;
+    color: black;
+}
+
+main h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: black;
+}
+main h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+main p {
+    margin-bottom: 1rem;
+    color: black;
+}
+
+main article {
+    margin-bottom: 2rem;
+    color: black;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer styles */
+footer {
+    background-color: #34495e;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+}
+
+footer p {
+    margin-top: 1rem;
+}
+
+/* Button Styles */
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+.appointment-btn {
+    background-color: #1b577f;
+}
+
+.appointment-btn:hover {
+    background-color: #0c2f41;
+    transform: scale(1.05);
+}
+
+.support-btn {
+    background-color: #166838;
+}
+
+.support-btn:hover {
+    background-color: #0f3a1d;
+    transform: scale(1.05);
+}
+
+/* Link Styles (Look like buttons) */
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid #fff; /* White border around the link */
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+a:hover {
+    color: #2c3e50; /* Change text color on hover */
+    transform: scale(1.05); /* Slightly enlarges the link on hover */
+}
+
+a:focus {
+    outline: none;
+    border-color: yellow; /* Optional, to add a focus color */
+}
+
+/* Navigation Bar styles */
+nav {
+    padding: 0.5rem 0; /* Reduced padding above and below the navigation bar */
+}
+
+/* Remove the default styling of the list */
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Create 4 equal-width columns for each nav item */
+    gap: 10px; /* Space between items */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Ensures the links are centered */
+}
+
+/* Style the individual navigation items */
+nav li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the links */
+nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 1.5rem .5rem; /* Adjust padding to ensure same height */
+    font-weight: bold;
+    font-size: 0.8 rem; /* Reduce text size */
+    border: 2px solid #fff; /* White border around the link */
+    border-radius: 5px;
+    height: 2rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #2c3e50;
+    border-color: yellow; /* Change border to red on hover */
+    color: white;
+}
+/* Style for the active link */
+nav a.current {
+    background-color: white; /* Active link background color */
+    color: #2c3e50; /* Active link text color */
+}
+
+

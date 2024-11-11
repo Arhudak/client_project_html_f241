@@ -1,0 +1,215 @@
+/* Reset basic styles for body and html */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-family: Arial, sans-serif; /* Set a default font */
+}
+
+/* Make sure figure elements are reset properly */
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+/* Skip link starts hidden */
+.skip {
+    display: none;
+}
+
+.skip:focus {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    z-index: 100;
+}
+
+/* Header styles */
+header {
+    width: 100%;
+    text-align: center;
+}
+
+.header-image img {
+    width: 100%;
+    max-height: 20vh;
+    object-fit: cover;
+}
+.header-image {
+    display: block;
+    margin: 0 auto;
+}
+
+header h1 {
+    display: block;
+    margin-top: 10px; /* Adjust as needed for spacing */
+    padding: 0;
+}
+
+
+/* Main content styling using grid */
+main {
+    overflow-y: auto; /* Enable scrolling for the main content */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 100px; /* Space for the fixed bottom section */
+}
+
+main section, main article {
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main section {
+    grid-column: span 2; /* Make sections span two columns */
+}
+
+main section h2, main section h3, main article h3 {
+    margin-bottom: 15px; /* Ensure proper spacing beneath headings */
+}
+
+main article {
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 10px;
+}
+
+main article:nth-child(odd) {
+    grid-column: span 2; /* Make every other article span two columns */
+}
+
+main article h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px; /* Add space below h3 header */
+}
+
+main article figure {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+}
+
+main article figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+main article figcaption {
+    margin-top: 5px; /* Add space above figcaption */
+    font-size: 0.75em; /* Adjust font size if needed */
+    color: #666; /* Add some contrast */
+    text-align: center; /* Center the figcaption */
+}
+
+main article p {
+    line-height: 1.6;
+    margin-top: 20px; /* Add space above paragraphs */
+    
+}
+
+/* Footer-like fixed section */
+.fixed-bottom-section {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #d7d7f6;
+    display: grid;
+    grid-template-rows: auto auto; /* Two rows for buttons and nav */
+    gap: 10px;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for visual separation */
+    z-index: 10; /* Ensure it stays on top */
+}
+
+/* Button styling */
+.header-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    width: 100%; /* Make buttons fit the page width */
+}
+
+.header-buttons .btn {
+    padding: 10px;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    box-sizing: border-box; /* Force padding to be included in width */
+    width: 100%;
+}
+
+.header-buttons .appointment-btn {
+    background-color: #0057b8;
+    color: white;
+}
+
+.header-buttons .appointment-btn:hover {
+    background-color: #004099;
+}
+
+.header-buttons .support-btn {
+    background-color: #ba0000;
+    color: white;
+}
+
+.header-buttons .support-btn:hover {
+    background-color: #5d0000;
+}
+
+/* Navigation styling */
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns for each nav item */
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+}
+
+nav ul li {
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #0057b8; /* Link color */
+    font-weight: bold;
+    padding: 10px; /* Add padding for clickable area */
+}
+
+nav ul li a.active {
+    background-color: #004099; /* Highlight color for active link */
+    color: white; /* Text color for active link */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Ensure consistent spacing for articles and lists */
+li {
+    margin-bottom: 10px;
+}
